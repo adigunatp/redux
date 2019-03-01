@@ -10,6 +10,12 @@ export const deleteTodo = id => ({
   id
 })
 
+export const editTodo = (id, newText) => ({
+  type: 'EDIT_TODO',
+  id,
+  newText
+})
+
 export const duplicateTodo = (id) => ({
   type: 'DUPLICATE_TODO',
   dupId : nextTodoId++,

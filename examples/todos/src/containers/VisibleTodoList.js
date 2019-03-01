@@ -19,7 +19,6 @@ const getVisibleTodos = (todos, filter) => {
 }
 
 const mapStateToProps = state => {
-  console.log(state)
   return {todos: getVisibleTodos(state.todos, state.visibilityFilter)}
 }
 
@@ -27,7 +26,7 @@ const mapDispatchToProps = dispatch => {
   return {
     toggleTodo: id => dispatch(toggleTodo(id)),
     deleteTodo: id => dispatch(deleteTodo(id)),
-    duplicateTodo: id => dispatch(duplicateTodo(id))
+    duplicateTodo: id => dispatch(duplicateTodo(id)),
   }
 }
 
